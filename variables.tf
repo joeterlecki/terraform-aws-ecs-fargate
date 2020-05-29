@@ -10,6 +10,12 @@ variable "vpc_id" {
   description = "The vpc to place the security group"
 }
 
+variable "vpc_cidr_block" {
+  type        = list(string)
+  default     = null
+  description = "The vpc cidr block"
+}
+
 variable "log_group_prefix" {
   type        = string
   default     = "/ecs/"
