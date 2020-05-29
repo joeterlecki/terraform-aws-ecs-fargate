@@ -1,5 +1,7 @@
 resource "aws_cloudwatch_log_group" "ecs_task_log_group" {
   name = "${var.log_group_prefix}${var.ecs_task_definition_family_name}"
+  retention_in_days = 30
+  tags = merge(local.tags)
 }
 
 resource "aws_ecs_cluster" "ecs_cluster" {
