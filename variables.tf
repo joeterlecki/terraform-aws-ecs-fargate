@@ -69,7 +69,7 @@ variable "ecs_service_name" {
   description = "The desired name for the ecs service"
 }
 
-variable "ecs_service_desried_count" {
+variable "ecs_service_desired_count" {
   type        = number
   default     = 1
   description = "The desired number of tasks to be created per task definition"

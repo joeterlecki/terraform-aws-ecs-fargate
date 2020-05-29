@@ -61,7 +61,7 @@ resource "aws_ecs_task_definition" "ecs_task_definition" {
 resource "aws_ecs_service" "ecs_service" {
   name                    = var.ecs_service_name
   cluster                 = aws_ecs_cluster.ecs_cluster.id
-  desired_count           = var.ecs_service_desried_count
+  desired_count           = var.ecs_service_desired_count
   task_definition         = aws_ecs_task_definition.ecs_task_definition.family
   iam_role                = var.ecs_service_iam_role
   depends_on              = [var.ecs_service_depends_on]
